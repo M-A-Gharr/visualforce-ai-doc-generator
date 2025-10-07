@@ -101,3 +101,7 @@ Special thanks to the **SFDX-Hardis** team for their open-source contributions t
 
 Contributions, feedback, and suggestions are welcome!  
 If you’re part of the **SFDX-Hardis** or **Cloudity** teams and want to integrate or extend this project, feel free to open an issue or pull request.
+
+## 👤 Author
+
+**Mohamed Amine GHARRAB** – https://github.com/M-A-Gharr/visualforce-ai-doc-generator
