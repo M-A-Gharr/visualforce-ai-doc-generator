@@ -1,0 +1,24 @@
+{
+  "name": "visualforce-doc-generator",
+  "version": "1.0.0",
+  "description": "Visualforce Documentation Generator",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js ./sample-project/src/pages ./sample-project/src/classes"
+  },
+  "keywords": [],
+  "author": "AI Assistant",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/parser": "^7.28.4",
+    "cheerio": "^1.1.2",
+    "commander": "^12.1.0",
+    "dotenv": "^17.2.3",
+    "fs-extra": "^11.3.2",
+    "glob": "^10.4.5",
+    "handlebars": "^4.7.8",
+    "jsdom": "^24.1.3",
+    "openai": "^6.1.0",
+    "xml2js": "^0.6.2"
+  }
+}

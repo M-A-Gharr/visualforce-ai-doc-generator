@@ -1,0 +1,215 @@
+# Visualforce Page: {{pageName}}
+
+<details>
+<summary>Overview</summary>
+
+## Visualforce Page Overview: {{pageName}}
+
+{{overview}}
+
+### Purpose of the Page
+{{purpose}}
+
+{{#if keyFunctions.length}}
+### Key Functions
+{{#each keyFunctions}}
+- {{this}}
+{{/each}}
+{{/if}}
+
+{{#if interactions.length}}
+### User / Page Interactions
+{{#each interactions}}
+- {{this}}
+{{/each}}
+{{/if}}
+
+### Metadata
+- **API Version**: {{pageMeta.apiVersion}}
+- **Label**: {{pageMeta.label}}
+
+</details>
+
+<details>
+<summary>Controllers / Extensions</summary>
+
+## Key Controllers / Extensions Used
+- **Standard Controller**: {{#if standardController}}{{standardController}}{{else}}None{{/if}}
+- **Custom Controller**: {{#if customController}}{{customController}}{{else}}None{{/if}}
+- **Extensions**: 
+{{#if extensions.length}}
+  {{#each extensions}}
+  - {{this}}
+  {{/each}}
+{{else}}
+  None
+{{/if}}
+
+</details>
+
+<details>
+<summary>Properties & Methods</summary>
+
+## Properties
+{{#if properties.length}}
+| Name | Type | Visibility | Modifiers | Description |
+|------|------|------------|-----------|-------------|
+{{#each properties}}
+| `{{this.name}}` | `{{this.type}}` | `{{this.visibility}}` | `{{join this.modifiers ', '}}` | {{this.descriptionAI}} |  <-- ICI
+{{/each}}
+{{else}}
+No public properties found in associated Apex controllers/extensions.
+{{/if}}
+
+## Methods
+{{#if methods.length}}
+| Name | Return Type | Parameters | Visibility | Modifiers | Description |
+|------|-------------|------------|------------|-----------|-------------|
+{{#each methods}}
+| `{{this.name}}` | `{{this.type}}` | `({{this.parameters}})` | `{{this.visibility}}` | `{{join this.modifiers ', '}}` | {{this.descriptionAI}} | <-- ET ICI
+{{/each}}
+{{else}}
+No public methods found in associated Apex controllers/extensions.
+{{/if}}
+
+</details>
+
+<details>
+<summary>Page Structure</summary>
+
+### Forms
+{{#if pageStructure.forms}}
+- Contains {{pageStructure.forms}} `apex:form` component(s).
+{{else}}
+- No `apex:form` detected.
+{{/if}}
+
+### Inputs
+{{#if pageStructure.inputs.length}}
+The page utilizes the following input bindings/fields:
+{{#each pageStructure.inputs}}
+- `{{this}}`
+{{/each}}
+{{else}}
+- No direct input bindings (`apex:inputField`, `apex:inputText`, etc.) detected.
+{{/if}}
+
+### Buttons
+{{#if pageStructure.buttons.length}}
+The page has buttons/links linked to the following actions:
+{{#each pageStructure.buttons}}
+- `{{this}}`
+{{/each}}
+{{else}}
+- No button actions (`apex:commandButton`, `apex:button`, `apex:commandLink`) detected.
+{{/if}}
+
+</details>
+
+<details>
+<summary>AJAX Interactions</summary>
+
+{{#if actionSupports.length}}
+The page includes `apex:actionSupport` components for dynamic updates:
+{{#each actionSupports}}
+- **Event**: `{{this.event}}`
+  {{#if this.reRender}}- **Re-renders**: `{{this.reRender}}`{{/if}}
+  {{#if this.action}}- **Action**: `{{this.action}}`{{/if}}
+  {{#if this.status}}- **Status**: `{{this.status}}`{{/if}}
+  - **Attached to**: `{{this.parent}}` (ID: `{{this.parentId}}`)
+{{/each}}
+{{else}}
+- No `apex:actionSupport` components detected.
+{{/if}}
+
+{{#if outputPanels.length}}
+### Output Panels
+The page utilizes the following `apex:outputPanel` components, often used as targets for AJAX re-renders:
+{{#each outputPanels}}
+- **ID**: `{{this.id}}`
+  - **Layout**: `{{this.layout}}`
+  - **Content Preview**: "{{this.contentPreview}}"
+{{/each}}
+{{else}}
+- No `apex:outputPanel` components with an ID detected.
+{{/if}}
+
+</details>
+
+<details>
+<summary>Page Block Structure</summary>
+
+{{#if pageBlocksAI.length}}
+{{#each pageBlocksAI}}
+### Page Block: {{this.title}}
+{{#if this.sections.length}}
+  {{#each this.sections}}
+  #### Section: {{this.title}}
+  {{#if this.items.length}}
+  - Items:
+    {{#each this.items}}
+    - {{this}}
+    {{/each}}
+  {{else}}
+  - *No items in this section.*
+  {{/if}}
+  {{/each}}
+{{else}}
+- *No sections in this Page Block.*
+{{/if}}
+{{/each}}
+{{else}}
+- *No `apex:pageBlock` components detected.*
+{{/if}}
+
+</details>
+
+<details>
+<summary>Dependencies</summary>
+
+### Objects
+{{#if dependencies.objects.length}}
+{{#each dependencies.objects}}
+- `{{this}}`
+{{/each}}
+{{else}}
+- No explicit SObject dependencies detected from bindings.
+{{/if}}
+
+### Fields
+{{#if dependencies.fields.length}}
+{{#each dependencies.fields}}
+- `{{this}}`
+{{/each}}
+{{else}}
+- No explicit field dependencies detected from bindings.
+{{/if}}
+
+### Custom Components
+{{#if dependencies.components.length}}
+{{#each dependencies.components}}
+- `<c:{{this}}>`
+{{/each}}
+{{else}}
+- No custom components (`<c:componentName>`) detected.
+{{/if}}
+
+### Static Resources
+{{#if dependencies.staticResources.length}}
+{{#each dependencies.staticResources}}
+- `$Resource.{{this}}`
+{{/each}}
+{{else}}
+- No static resources (`$Resource.name`) detected.
+{{/if}}
+
+### Scripts
+{{#if scripts.length}}
+{{#each scripts}}
+- {{this.type}}: `{{this.value}}`
+{{/each}}
+{{else}}
+- No script tags (`script` or `apex:includeScript`) detected.
+{{/if}}
+
+</details>
