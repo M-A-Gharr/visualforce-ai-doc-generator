@@ -9,6 +9,10 @@ Perfect for Salesforce developers who want to save time maintaining technical do
 - Parses Apex classes for methods and properties
 - ⚡ Enhanced extraction of `apex:pageBlock`, `apex:pageBlockSection`, and `apex:pageBlockSectionItem`
 - Generates clean, developer-friendly Markdown files using **Handlebars templates**
+- Instantly generate accurate Visualforce documentation
+- Improve project maintainability and team collaboration
+- Keep your documentation always in sync with your Apex code
+- **Help older companies with legacy Visualforce code understand, maintain, and modernize their Salesforce projects faster**
 
 ## 🧩 Why Use This Tool?
 If you’re a **Salesforce developer or consultant**, this tool helps you:
