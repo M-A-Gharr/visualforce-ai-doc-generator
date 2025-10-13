@@ -1,9 +1,12 @@
 # Visualforce AI Documentation Generator
 
-A powerful Node.js-based tool that **automatically generates documentation for Salesforce Visualforce pages** in Markdown format.  
-Perfect for Salesforce developers who want to save time maintaining technical documentation.
+> **_Turn your Salesforce Visualforce code into instant, AI-powered documentation._**
 
-## 🚀 Features
+A powerful **Node.js-based tool** that automatically generates clean, Markdown-formatted documentation for Salesforce **Visualforce pages** and **Apex** controllers.
+
+Perfect for **Salesforce developers**, **consultants**, and **companies maintaining legacy Visualforce systems** who want to save time, improve maintainability, and modernize their codebase.
+
+## 🚀 Features & Benefits
 - Extracts Visualforce components such as `apex:page`, `apex:form`, `apex:inputField`, and `apex:commandButton`
 - Detects controllers, extensions, and `recordSetVar` references
 - Parses Apex classes for methods and properties
@@ -12,7 +15,7 @@ Perfect for Salesforce developers who want to save time maintaining technical do
 - Instantly generate accurate Visualforce documentation
 - Improve project maintainability and team collaboration
 - Keep your documentation always in sync with your Apex code
-- **Help older companies with legacy Visualforce code understand, maintain, and modernize their Salesforce projects faster**
+- 💡**Help older companies with legacy Visualforce code understand, maintain, and modernize their Salesforce projects faster**
 
 ## 🧩 Why Use This Tool?
 If you’re a **Salesforce developer or consultant**, this tool helps you:
